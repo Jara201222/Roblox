@@ -8,7 +8,15 @@ local function Request(Url, Yes)
         Url = Url,
         Headers = {
             ["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36";
-        }
+        }while true do
+    local player = game.Players.LocalPlayer
+local chestPart = workspace.Finish.Chest
+local offset = Vector3.new(0,50,0)
+
+player.Character:SetPrimaryPartCFrame(chestPart.CFrame + offset)
+wait(0.1)
+end
+            
     })
 end
 
